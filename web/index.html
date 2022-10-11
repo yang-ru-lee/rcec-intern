@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GDDpage</title>
+<link rel="stylesheet" href="asset/skeleton.min.css">
+<link rel="stylesheet" href="asset/leaflet.min.css">
+<link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+<button id="menu" onclick="openPanel()"><img src="asset/menu.svg"></button>
+<div id="panel">
+<button id="x" onclick="closePanel()"><img src="asset/x.svg"></button>
+<button onclick="toCtrl()">Control</button><button onclick="toDes()">Descriptions</button>
+<div id="ctrl">
+SSP:
+<select id="ssp">
+<option value="126">1.26 (Sustainability)</option>
+<option value="585">5.85 (Fossil-fueled Development)</option>
+</select>
+<br>
+21st Century:
+<select id="year">
+<option value="1">Early</option>
+<option value="2">Middle</option>
+<option value="3">Late</option>
+</select>
+<br>
+Temperature:
+<select id="gdd">
+<option value="tmp">GDD</option>
+<option value="tmpdiff">GDD Increment</option>
+<option value="cluster">K-means Clustering</option>
+</select>
+<br>
+Alpha:
+<input id="alpha" type="range" min="0" max="100" value="100">
+</div>
+<div id="des">
+This website demonstrates the advanced Earth model (TaiESM1, Lee et al. 2021) projected temperature changes used in "Challenges and Opportunities of Agricultural Land in Taiwan under two Selected Shared Socioeconomic Pathways (SSPs)"
+<br>
+<br>
+Temperature data: (AS-RCEC) TaiESM1
+<br>
+Base map: Open Street Map
+<br>
+<br>
+The temperature data was supported by the Research Center for Envirnomental Changes, Academia Sinica. To cite this web page, please annotated the source of the data: Academia Sinica
+</div>
+</div>
+<div id="map"></div>
+<img id="bar" src="data/color_1.png">
+<script src="asset/leaflet.min.js"></script>
+<script src="asset/script.js"></script>
+</body>
+</html>
